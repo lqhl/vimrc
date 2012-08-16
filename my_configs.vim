@@ -1,3 +1,6 @@
+" set local leader
+let maplocalleader = '\'
+
 " set color scheme
 colorscheme peaksea
 
@@ -8,3 +11,4 @@ let g:vikiOpenUrlWith_http   = 'silent !firefox %{URL}'
 let g:vikiOpenUrlWith_ANY    = 'silent !firefox %{URL}'
 let g:vikiOpenFileWith_html  = 'silent !firefox %{FILE}'
 let g:vikiOpenFileWith_ANY   = 'silent !start %{FILE}'
+
