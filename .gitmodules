@@ -62,3 +62,6 @@
 [submodule "sources_plugins/viki"]
 	path = sources_plugins/viki
 	url = git://github.com/tomtom/viki_vim.git
+[submodule "sources_plugins/voom"]
+	path = sources_plugins/voom
+	url = git://github.com/vim-scripts/VOoM.git
