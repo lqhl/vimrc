@@ -65,3 +65,6 @@
 [submodule "sources_plugins/voom"]
 	path = sources_plugins/voom
 	url = git://github.com/vim-scripts/VOoM.git
+[submodule "sources_plugins/nerdcommenter"]
+	path = sources_plugins/nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter.git
