@@ -45,3 +45,6 @@ noremap zF <Nop>
 noremap zd <Nop>
 noremap zD <Nop>
 noremap zE <Nop>
+
+" case-insensitive filename completion
+set wildignorecase
