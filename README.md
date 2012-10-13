@@ -31,6 +31,14 @@ The awesome version includes a lot of great plugins, configurations and color sc
 Use [msysgit](http://msysgit.github.com/) to checkout the repository and run the installation instructions above. No special instructions needed ;-)
 
 
+## How to update to latest version?
+
+Simply just do a git rebase!
+
+    cd ~/.vim_runtime
+    git pull --rebase
+
+
 ## Some screenshots
 
 Colors when editing a Python file:
@@ -50,7 +58,7 @@ This vimrc even works on Windows!
 
 I recommend reading the docs of these plugins to understand them better. Each of them provide a much better Vim experience!
 
-* [pathogen.vim](https://github.com/tpope/vim-pathogen): Manages the runtime path of the plugins (this and git submodules)
+* [pathogen.vim](https://github.com/tpope/vim-pathogen): Manages the runtime path of the plugins
 * [YankRing](https://github.com/vim-scripts/YankRing.vim): Maintains a history of previous yanks, changes and deletes
 * [snipMate.vim](https://github.com/garbas/vim-snipmate): snipMate.vim aims to be a concise vim script that implements some of TextMate's snippets features in Vim
 * [bufexplorer.zip](https://github.com/vim-scripts/bufexplorer.zip): Buffer Explorer / Browser. This plugin can be opened with `<leader+o>`
