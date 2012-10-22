@@ -13,7 +13,8 @@ let g:vikiOpenFileWith_html  = 'silent !firefox %{FILE}'
 let g:vikiOpenFileWith_ANY   = 'silent !start %{FILE}'
 
 " VOoM options
-let g:voom_ft_modes = {'viki': 'viki', 'py': 'python'}
+let g:voom_ft_modes = {'viki': 'viki', 'python': 'python', 'markdown': 'markdown'}
+au BufNewFile,BufRead *.viki set filetype=viki
 
 " folding options
 set foldmethod=syntax
