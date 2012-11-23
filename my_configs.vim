@@ -49,3 +49,6 @@ noremap zE <Nop>
 
 " case-insensitive filename completion
 set wildignorecase
+
+" CSCOPE settings
+source ~/.vim_runtime/cscope_maps.vim
