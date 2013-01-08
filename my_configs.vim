@@ -53,3 +53,8 @@ set wildignorecase
 " CSCOPE settings
 source ~/.vim_runtime/cscope_maps.vim
 
+" MiniBufExplorer
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1 
