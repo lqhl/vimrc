@@ -60,3 +60,6 @@ let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1 
 
 set textwidth=80
+
+" Chinese support
+set fileencodings=utf-8,gb2312,gbk
