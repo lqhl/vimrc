@@ -2,7 +2,7 @@
 let maplocalleader = '\'
 
 " set color scheme
-colorscheme peaksea
+colorscheme solarized
 
 " vim-viki options
 let g:vikiHomePage = '~/Dropbox/notes/index.viki'
@@ -22,16 +22,16 @@ set foldmethod=syntax
 au BufNewFile,BufRead *.cpp,*.c,*.h,*.java syn region myCComment start="/\*" end="\*/" fold keepend transparent
 " the following function keep the "/*" beginning of the comment in the folded text
 set foldtext=MyFoldText()
-function MyFoldText()
-  let line = getline(v:foldstart)
-  let sub = substitute(line, '^[\t ]*', '', '')
-  let nlines = v:foldend - v:foldstart + 1
-  if strlen(nlines) == 1
-    let nlines = " " . nlines
-  elseif strlen(nlines) == 2
-    let nlines = " " . nlines
-  endif
-  return "+-" . v:folddashes . nlines . ": " . sub
+function! MyFoldText()
+    let line = getline(v:foldstart)
+    let sub = substitute(line, '^[\t ]*', '', '')
+    let nlines = v:foldend - v:foldstart + 1
+    if strlen(nlines) == 1
+        let nlines = " " . nlines
+    elseif strlen(nlines) == 2
+        let nlines = " " . nlines
+    endif
+    return "+-" . v:folddashes . nlines . ": " . sub
 endfunction
 " open all folds
 set foldlevel=100
@@ -63,3 +63,27 @@ set textwidth=80
 
 " Chinese support
 set fileencodings=utf-8,gb2312,gbk
+
+" Toggle Ctags window
+noremap <silent> <C-g> :TlistToggle<CR>
+
+" Reselect visual block after indent/outdent
+vnoremap < <gv
+vnoremap > >gv
+
+" Make Y behave like other capitals
+map Y y$
+
+" Clear search highlights
+noremap <silent><Leader>/ :nohls<CR>
+
+" automatically reload vimrc when it's saved
+au BufWritePost my_configs.vim so ~/.vimrc
+
+" Some Linux distributions set filetype in /etc/vimrc.
+" Clear filetype flags before changing runtimepath to force Vim to reload them.
+filetype off
+filetype plugin indent off
+set runtimepath+=$GOROOT/misc/vim
+filetype plugin indent on
+syntax on
