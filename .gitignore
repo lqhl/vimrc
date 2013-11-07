@@ -1,2 +1,4 @@
 temp_dirs/
 .netrwhist
+tags
+*.spl
