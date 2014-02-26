@@ -92,11 +92,11 @@ if !empty($GOROOT)
     syntax on
 endif
 
-" Mappings to access buffers (don't use "\p" because a
+" Mappings to access buffers (don't use ",p" because a
 " delay before pressing "p" would accidentally paste).
-" \l       : list buffers
-" \b \f \g : go back/forward/last-used
-" \1 \2 \3 : go to buffer 1/2/3 etc
+" ,l       : list buffers
+" ,b ,f ,g : go back/forward/last-used
+" ,1 ,2 ,3 : go to buffer 1/2/3 etc
 nnoremap <Leader>l :ls<CR>
 nnoremap <Leader>b :bp<CR>
 nnoremap <Leader>f :bn<CR>
@@ -111,3 +111,9 @@ nnoremap <Leader>7 :7b<CR>
 nnoremap <Leader>8 :8b<CR>
 nnoremap <Leader>9 :9b<CR>
 nnoremap <Leader>0 :10b<CR>
+
+" toggle Syntastic
+let g:syntastic_mode_map = { 'mode': 'passive'}
+noremap <Leader>s :SyntasticCheck<CR>
+noremap <Leader>t :SyntasticToggleMode<CR>
+noremap <Leader>r :SyntasticReset<CR>
