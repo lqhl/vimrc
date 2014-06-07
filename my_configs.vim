@@ -117,3 +117,13 @@ let g:syntastic_mode_map = { 'mode': 'passive'}
 noremap <Leader>s :SyntasticCheck<CR>
 noremap <Leader>t :SyntasticToggleMode<CR>
 noremap <Leader>r :SyntasticReset<CR>
+
+function! g:ToggleColorColumn()
+    if &colorcolumn != ''
+        setlocal colorcolumn&
+    else
+        setlocal colorcolumn=+1
+    endif
+endfunction
+nnoremap <silent> <leader>h :call g:ToggleColorColumn()<CR>
+highlight ColorColumn ctermbg=blue guibg=blue
